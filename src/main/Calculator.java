@@ -64,7 +64,7 @@ public class Calculator {
    */
   public Calculator calculate(Operator op, double inputNumber) {
     if (op == null) {
-      throw new IllegalArgumentException("Invalid Operator: " + op);
+      throw new IllegalArgumentException("Invalid Operator: null");
     }
     Operation operation = symbolMap.get(op);
     if(operation == null) {
@@ -79,13 +79,6 @@ public class Calculator {
    */
   public double getResult(){
     return finalResult;
-  }
-
-  /**
-   * Add new Operator and corresponding Operation Function
-   */
-  public void addOperator(Operator op, Operation operation) {
-    symbolMap.put(op, operation);
   }
 
   public  static void main(String[] args) {
